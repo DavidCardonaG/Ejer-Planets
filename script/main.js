@@ -91,7 +91,36 @@ let ordernarValores = (e) => {
 
 }
 
+let filtrarDistancia = (e) => {
+    let distanciaABuscar = prompt("Digite la distacia a filtrar");
+
+    let arregloFiltradoDistancia = guardarDistancia.filter(
+        (distancia) => distancia >= distanciaABuscar
+    );
+
+    if (arregloFiltradoDistancia == undefined)
+        alert("No existe el planeta");
+    else
+        alert("Informacion del filtro",arregloFiltradoDistancia);
+        console.log(arregloFiltradoDistancia)
+
+}
+
+let buscarPlaneta = (e) => {
+    let nombrePlanetaABuscar = prompt("Digite el nombre del planeta a buscar");
+    console.log(nombrePlanetaABuscar);
+    let r = guardarNombre.find((nombre) => nombrePlanetaABuscar.toLowerCase() == nombre.toLowerCase());
+    console.log(r)
+
+    if (r == undefined)
+        alert("No existe el planeta");
+    else
+        alert("El planeta si existe");
+}
+
 
 
 document.querySelector("#btn_enviar_evaluacion").addEventListener("click", enviarEvaluacion);
 document.querySelector("#btn_ordenar_valores").addEventListener("click", ordernarValores);
+document.querySelector("btn_filtar_distancia").addEventListener("click", filtrarDistancia);
+document.querySelector("btn_buscar_planeta").addEventListener("click", buscarPlaneta);
