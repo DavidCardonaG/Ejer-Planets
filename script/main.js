@@ -2,18 +2,32 @@
 import Planet from "../script/planeta.js";
 
 
-var arrayValores;
-let arrayDistance;
-let arrayNamePlanets = [];
-let arrayPlanets = [];
-let arrayTamañ = [];
+let guardarIngreso =[];
+let guardarDistancia = [];
+let guardarNombre = [];
+let guardarPlaneta = [];
+let guardarTamanio = [];
+
 
 var enviarEvaluacion = (e) => {
 
-    arrayValores = [...document.querySelectorAll(".numeracion_planetas").value];
-    arrayDistance = [...document.querySelectorAll(".distancia_planetas").value];
-    arrayNamePlanets = [...document.querySelectorAll(".nombre_planetas").value];
-    arrayTamañ = [...document.querySelectorAll(".Tamanio_planetas").value];
+    
+    let ingresoN = [...document.querySelectorAll(".numeracion_planetas")];
+    for (let i = 0; i < ingresoN.length; i++) {
+        const element = ingresoN[i].value;
+        guardarIngreso.push(element);
+    }
+    console.log(guardarIngreso);
 
-    console.log(arrayNamePlanets);
+
+    let distanciaP = [...document.querySelectorAll(".distancia_planetas")];
+    let nombreP = [...document.querySelectorAll(".nombre_planetas")];
+    let tamanioP = [...document.querySelectorAll(".Tamanio_planetas")];
+
+    //ingresoN.forEach(e => e)
+
+
+
 }
+
+document.querySelector("#btn_enviar_evaluacion").addEventListener("click", enviarEvaluacion);
