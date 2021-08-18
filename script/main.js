@@ -122,5 +122,5 @@ let buscarPlaneta = (e) => {
 
 document.querySelector("#btn_enviar_evaluacion").addEventListener("click", enviarEvaluacion);
 document.querySelector("#btn_ordenar_valores").addEventListener("click", ordernarValores);
-document.querySelector("btn_filtar_distancia").addEventListener("click", filtrarDistancia);
-document.querySelector("btn_buscar_planeta").addEventListener("click", buscarPlaneta);
+document.querySelector("#btn_filtar_distancia").addEventListener("click", filtrarDistancia);
+document.querySelector("#btn_buscar_planeta").addEventListener("click", buscarPlaneta);
