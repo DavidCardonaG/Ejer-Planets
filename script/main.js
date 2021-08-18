@@ -43,10 +43,10 @@ var enviarEvaluacion = (e) => {
 
     for (let x = 1; x <= guardarIngreso.length; x++) {
         let planeta = new Planet();
-        planeta.distance = (elementD[x].value);
-        planeta.name = (elementN[x].value);
-        planeta.numero_clasif = (elementI[x].value);
-        planeta.tamañ = (elementT[x].value);
+        planeta.distance = document.getElementById(`d_planeta_${x}`).value;
+        planeta.name = document.getElementById(`np_planeta_${x}`).value;
+        planeta.numero_clasif = document.getElementById(`n_planeta_${x}`).value;
+        planeta.tamañ = document.getElementById(`t_planeta_${x}`).value;
     
         guardarPlaneta.push(planeta);
         console.log(x)
