@@ -1,3 +1,4 @@
+// Método constructor, se ejecuta por defecto!!!
 class Planet {
     constructor(name_planet){
     this.numero_clasif = 0;
@@ -6,4 +7,5 @@ class Planet {
     this.tamañ = 0
     }
 }
-export default Planet;
+export default Planet; // exportamos clase Planet
+

@@ -1,6 +1,8 @@
 // code here
+// importamos clase "Planet" de planeta.js
 import Planet from "../script/planeta.js";
 
+// Declaración de variables
 
 let guardarIngreso = [];
 let guardarDistancia = [];
