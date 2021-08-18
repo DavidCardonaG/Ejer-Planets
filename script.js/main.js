@@ -1,4 +1,4 @@
 // code here
-import Planet from "/planet.js";
+import Planet from "../planeta.js";
 
 
