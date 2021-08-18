@@ -10,7 +10,7 @@ let guardarTamanio = [];
 
 
 var enviarEvaluacion = (e) => {
-
+// Almacenamos datos de cada tipo, y los agregamos a los arrays guardarIngreso, guardarDistancia, guardarNombre, guardarTamanio, guardarPlaneta...
     
     let ingresoN = [...document.querySelectorAll(".numeracion_planetas")];
     for (let i = 0; i < ingresoN.length; i++) {
@@ -56,6 +56,40 @@ var enviarEvaluacion = (e) => {
     alert("Arreglo creado correctamente");
 }
 
+let ordernarValores = (e) => {
+    /**
+     * Generamos copia del arreglo en ambos casos.
+     */
+    let copiArregloValores = guardarIngreso.map(numero => numero);
+    let copiaArregloPlanetas = guardarPlaneta.map(planeta => planeta);
+
+    /**
+     * Procedemos a ordenar el arreglo,  en el segundo caso,  emplearemos una propiedad de la 
+     * clase planeta,  como elemento de comparacion en la funcion de ordenamiento
+     */
+    copiArregloValores.sort((a, b) => {
+        return a - b;                   // array.prototype.sort => ordena elementos del array, en el caso de atributos tipo number 
+    });                                 // requiere la expresión "a-b" para evitar que ordene por posición numérica, sino por lógica 
+                                        // secuencial.
+    copiaArregloPlanetas.sort((a, b) => {
+        return a.numero_clasificacion - b.numero_clasificacion;
+    });
+
+    let copia2ArregloPlanetas = copiaArregloPlanetas.map(planeta => planeta);
+
+    console.log("********Arreglos ascendente***********")
+    console.log(copiArregloValores);
+    console.log(copiaArregloPlanetas);
+
+    console.log("********Arreglos descendente***********")
+    copiArregloValores.reverse(); //El método reverse() invierte el orden de los elementos de un array. 
+    copia2ArregloPlanetas.reverse(); //El primer elemento pasa a ser el último y el último pasa a ser el primero.
+    console.log(copiArregloValores);
+    console.log(copia2ArregloPlanetas);
+
+}
+
 
 
 document.querySelector("#btn_enviar_evaluacion").addEventListener("click", enviarEvaluacion);
+document.querySelector("#btn_ordenar_valores").addEventListener("click", ordernarValores);
