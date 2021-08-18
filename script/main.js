@@ -115,7 +115,8 @@ let buscarPlaneta = (e) => {
     if (r == undefined)
         alert("No existe el planeta");
     else
-        alert("El planeta si existe");
+    
+        alert(`El planeta si existe y esta en este grupo ${guardarNombre}`);
 }
 
 
