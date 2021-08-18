@@ -14,4 +14,6 @@ var enviarEvaluacion = (e) => {
     arrayDistance = [...document.querySelectorAll(".distancia_planetas").value];
     arrayNamePlanets = [...document.querySelectorAll(".nombre_planetas").value];
     arrayTamañ = [...document.querySelectorAll(".Tamanio_planetas").value];
+
+    console.log(arrayNamePlanets);
 }
